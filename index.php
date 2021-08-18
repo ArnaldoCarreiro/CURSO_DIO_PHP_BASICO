@@ -13,13 +13,13 @@
 		<p>Dados do Competidor</p>
 		<?php 	
 
-			$MensagemDeSecesso = isset($_SESSION['mensagem_de_sucesso']) ? $_SESSION['mensagem_de_sucesso'] : ' ';
-			if (!empty($MensagemDeSecesso)) 
+			$MensagemDeSucesso = obterMensagemSucesso();
+			if (!empty($MensagemDeSucesso)) 
 			{
-				echo $MensagemDeSecesso;
+				echo $MensagemDeScesso;
 			}
 
-			$MensagemDeErro = isset($_SESSION['mensagem_de_erro']) ? $_SESSION['mensagem_de_erro'] : ' ';
+			$MensagemDeErro = obterMensagemErro();
 			if (!empty($MensagemDeErro)) 
 			{
 				echo $MensagemDeErro;
