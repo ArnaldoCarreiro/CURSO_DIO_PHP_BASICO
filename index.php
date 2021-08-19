@@ -1,5 +1,5 @@
 <?php
-	session_start();
+	include "servicos/servicoMensagemSessao.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,21 +8,23 @@
 	<title>Formulario</title>
 </head>
 <body>
-
+	//Criando o Form
 	<form  action="script.php" method="post">	
 		<p>Dados do Competidor</p>
+
+		//Inserindo a Mensagem de Erro / Mensagemd de Sucesso
 		<?php 	
 
-			$MensagemDeSucesso = obterMensagemSucesso();
-			if (!empty($MensagemDeSucesso)) 
+			$mensagemDeSucesso = obterMensagemSucesso();
+			if (!empty($mensagemDeSucesso)) 
 			{
-				echo $MensagemDeScesso;
+				echo $mensagemDeSucesso;
 			}
 
-			$MensagemDeErro = obterMensagemErro();
-			if (!empty($MensagemDeErro)) 
+			$mensagemDeErro = obterMensagemErro();
+			if (!empty($mensagemDeErro)) 
 			{
-				echo $MensagemDeErro;
+				echo $mensagemDeErro;
 			}
 		?>
 		<p>Nome: <input type="text" name="nome"></p>

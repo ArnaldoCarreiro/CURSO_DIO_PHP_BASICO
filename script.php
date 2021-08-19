@@ -1,6 +1,6 @@
 <?php
-	// Iniciando uma sessão 
 	
+	//incluindo as outras paginas 
 	include "servicos/servicoMensagemSessao.php";
 	include "servicos/servicoValidacao.php";
 	include "servicos/servicoCategoriaCompetidor.php";
@@ -9,7 +9,8 @@
 	$nome = $_POST['nome'];
 	$idade = $_POST['idade'];
 
-	defineCategoriaComeptidor($nome, $idade);
+	defineCategoriaCompetidor($nome, $idade);
 
 	header('location: index.php');
+
 ?>
